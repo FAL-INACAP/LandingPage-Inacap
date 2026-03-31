@@ -1,0 +1,363 @@
+:root {
+  --xbox-green-dark: #107c10;
+  --xbox-green-light: #6bcb1e;
+  --xbox-yellow: #ffb800;
+  --xbox-black: #0a0a0a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(107, 203, 30, 0.08), transparent 26%),
+    linear-gradient(180deg, var(--xbox-black) 0%, #050505 100%);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Glow decorativo */
+.bg-glow {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(90px);
+  opacity: 0.35;
+}
+
+.bg-glow-1 {
+  width: 320px;
+  height: 320px;
+  top: -80px;
+  right: -80px;
+  background: rgba(107, 203, 30, 0.22);
+}
+
+.bg-glow-2 {
+  width: 260px;
+  height: 260px;
+  bottom: 80px;
+  left: -100px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Navbar */
+.navbar-custom {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar-brand {
+  color: #fff !important;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--xbox-green-light) !important;
+}
+
+/* Botones */
+.btn-warning {
+  background-color: var(--xbox-yellow);
+  border-color: var(--xbox-yellow);
+  color: var(--xbox-black);
+  transition: all 0.2s ease;
+}
+
+.btn-warning:hover {
+  background-color: #e6a600;
+  border-color: #e6a600;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 184, 0, 0.3);
+}
+
+.btn-outline-light {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: var(--xbox-green-light);
+  border-color: var(--xbox-green-light);
+  color: var(--xbox-black);
+  transform: translateY(-2px);
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 120px 0 70px;
+}
+
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-kicker {
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  margin-bottom: 1rem;
+}
+
+.hero-kicker::before {
+  content: "";
+  width: 42px;
+  height: 2px;
+  background: var(--xbox-green-light);
+  display: inline-block;
+  border-radius: 999px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.hero-title {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  margin-bottom: 1.2rem;
+}
+
+.hero-accent {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-accent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2em;
+  width: 100%;
+  height: 0.2em;
+  background: rgba(255, 184, 0, 0.6);
+  border-radius: 999px;
+}
+
+.hero-text {
+  max-width: 560px;
+  line-height: 1.8;
+  margin-bottom: 1.7rem;
+}
+
+.hero-image-wrap {
+  max-width: 620px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img {
+  filter: drop-shadow(0 26px 36px rgba(0, 0, 0, 0.45));
+  transform: translateY(12px);
+}
+
+.floating-card {
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  min-width: 120px;
+}
+
+/* Cards de beneficios y productos */
+.benefit-card,
+.product-card {
+  border-radius: 1.5rem !important;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+  background: linear-gradient(
+    145deg,
+    rgba(16, 124, 16, 0.1),
+    rgba(0, 0, 0, 0.4)
+  ) !important;
+  border: 1px solid rgba(107, 203, 30, 0.2) !important;
+}
+
+.benefit-card:hover,
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--xbox-green-light) !important;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+}
+
+.icon-box {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  border: 1px solid rgba(107, 203, 30, 0.3);
+  background: rgba(107, 203, 30, 0.1) !important;
+  transition: all 0.2s ease;
+}
+
+.benefit-card:hover .icon-box {
+  background: rgba(107, 203, 30, 0.2) !important;
+  border-color: var(--xbox-green-light);
+}
+
+/* Badges */
+.badge.bg-warning {
+  background-color: var(--xbox-yellow) !important;
+  color: var(--xbox-black) !important;
+}
+
+.badge.bg-success {
+  background-color: var(--xbox-green-light) !important;
+  color: var(--xbox-black) !important;
+}
+
+/* CTA card */
+.cta-card {
+  min-height: 380px;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+}
+.cta-card .card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cta-card .card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+}
+
+/* Estilos adicionales para el formulario (inputs) */
+.form-control,
+.form-select {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  border-color: var(--xbox-yellow) !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 184, 0, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--xbox-yellow);
+  border-color: var(--xbox-yellow);
+}
+
+.text-xbox-green {
+  color: var(--xbox-green-light) !important;
+  font-weight: 800;
+}
+
+.card-title {
+  color: #fff;
+}
+
+/* Footer nuevo */
+.footer-xbox {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, #050505 100%);
+  border-top: 1px solid rgba(107, 203, 30, 0.2);
+}
+
+.footer-link {
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--xbox-green-light) !important;
+}
+
+.social-icon {
+  font-size: 1.4rem;
+  transition: color 0.2s ease;
+}
+
+.social-icon:hover {
+  color: var(--xbox-green-light) !important;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .floating-card {
+    display: none;
+  }
+  .hero {
+    padding-top: 110px;
+    min-height: auto;
+  }
+  .hero-image-wrap {
+    max-width: 480px;
+  }
+
+  /* CTA card mejorada para móvil: imagen panorámica centrada y recortada */
+  .cta-card {
+    min-height: 380px;
+    height: auto;
+  }
+  .cta-card .card-img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .cta-card .card-img-overlay {
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  .cta-card h2 {
+    font-size: 1.75rem !important;
+    margin-bottom: 0.5rem;
+  }
+  .cta-card .lead {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.75rem;
+  }
+  .cta-card .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-image-wrap {
+    max-width: 520px;
+  }
+}
