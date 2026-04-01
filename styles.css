@@ -1,10 +1,13 @@
+/* ===== VARIABLES ===== */
 :root {
   --xbox-green-dark: #107c10;
   --xbox-green-light: #6bcb1e;
   --xbox-yellow: #ffb800;
   --xbox-black: #0a0a0a;
+  --transition: 0.2s ease;
 }
 
+/* ===== RESET & GLOBALES ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,9 +25,10 @@ body {
     linear-gradient(180deg, var(--xbox-black) 0%, #050505 100%);
   color: #fff;
   overflow-x: hidden;
+  width: 100%;
 }
 
-/* Glow decorativo */
+/* ===== GLOW DECORATIVO ===== */
 .bg-glow {
   position: fixed;
   pointer-events: none;
@@ -49,7 +53,7 @@ body {
   background: rgba(255, 255, 255, 0.06);
 }
 
-/* Navbar */
+/* ===== NAVBAR ===== */
 .navbar-custom {
   background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(14px);
@@ -62,19 +66,19 @@ body {
 
 .nav-link {
   color: rgba(255, 255, 255, 0.85) !important;
-  transition: color 0.2s;
+  transition: color var(--transition);
 }
 
 .nav-link:hover {
   color: var(--xbox-green-light) !important;
 }
 
-/* Botones */
+/* ===== BOTONES ===== */
 .btn-warning {
   background-color: var(--xbox-yellow);
   border-color: var(--xbox-yellow);
   color: var(--xbox-black);
-  transition: all 0.2s ease;
+  transition: all var(--transition);
 }
 
 .btn-warning:hover {
@@ -87,7 +91,7 @@ body {
 .btn-outline-light {
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
-  transition: all 0.2s ease;
+  transition: all var(--transition);
 }
 
 .btn-outline-light:hover {
@@ -97,7 +101,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Hero */
+/* ===== HERO ===== */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -182,14 +186,7 @@ body {
   transform: translateY(12px);
 }
 
-.floating-card {
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-  min-width: 120px;
-}
-
-/* Cards de beneficios y productos */
+/* ===== CARDS (beneficios y productos) ===== */
 .benefit-card,
 .product-card {
   border-radius: 1.5rem !important;
@@ -221,7 +218,7 @@ body {
   font-size: 1.35rem;
   border: 1px solid rgba(107, 203, 30, 0.3);
   background: rgba(107, 203, 30, 0.1) !important;
-  transition: all 0.2s ease;
+  transition: all var(--transition);
 }
 
 .benefit-card:hover .icon-box {
@@ -229,7 +226,7 @@ body {
   border-color: var(--xbox-green-light);
 }
 
-/* Badges */
+/* ===== BADGES ===== */
 .badge.bg-warning {
   background-color: var(--xbox-yellow) !important;
   color: var(--xbox-black) !important;
@@ -240,17 +237,12 @@ body {
   color: var(--xbox-black) !important;
 }
 
-/* CTA card */
+/* ===== CTA CARD (Game Pass) ===== */
 .cta-card {
   min-height: 380px;
   height: auto;
   background-size: cover;
   background-position: center;
-}
-.cta-card .card-img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 .cta-card .card-img-overlay {
@@ -262,7 +254,7 @@ body {
   padding: 1.5rem;
 }
 
-/* Estilos adicionales para el formulario (inputs) */
+/* ===== FORMULARIO NEWSLETTER ===== */
 .form-control,
 .form-select {
   background-color: rgba(0, 0, 0, 0.6) !important;
@@ -282,6 +274,7 @@ body {
   border-color: var(--xbox-yellow);
 }
 
+/* ===== TEXTO ESPECIAL ===== */
 .text-xbox-green {
   color: var(--xbox-green-light) !important;
   font-weight: 800;
@@ -291,14 +284,27 @@ body {
   color: #fff;
 }
 
-/* Footer nuevo */
+/* ===== PROMO REQUIEM ===== */
+.promo-requiem-static {
+  min-height: 500px;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.object-position-center-30 {
+  object-position: center 25%;
+}
+
+/* ===== FOOTER ===== */
 .footer-xbox {
   background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, #050505 100%);
   border-top: 1px solid rgba(107, 203, 30, 0.2);
 }
 
 .footer-link {
-  transition: color 0.2s ease;
+  transition: color var(--transition);
 }
 
 .footer-link:hover {
@@ -307,36 +313,32 @@ body {
 
 .social-icon {
   font-size: 1.4rem;
-  transition: color 0.2s ease;
+  transition: color var(--transition);
 }
 
 .social-icon:hover {
   color: var(--xbox-green-light) !important;
 }
 
-/* Responsive */
+/* ===== MEDIA QUERIES ===== */
+/* Mobile first: estilos base para móvil, luego se ajustan para pantallas más grandes */
+
+/* Móviles (menos de 768px) */
 @media (max-width: 767px) {
-  .floating-card {
-    display: none;
-  }
   .hero {
     padding-top: 110px;
     min-height: auto;
   }
+
   .hero-image-wrap {
     max-width: 480px;
   }
 
-  /* CTA card mejorada para móvil: imagen panorámica centrada y recortada */
   .cta-card {
     min-height: 380px;
     height: auto;
   }
-  .cta-card .card-img {
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
+
   .cta-card .card-img-overlay {
     padding: 1rem;
     justify-content: center;
@@ -346,18 +348,105 @@ body {
     font-size: 1.75rem !important;
     margin-bottom: 0.5rem;
   }
+
   .cta-card .lead {
     font-size: 0.85rem !important;
     margin-bottom: 0.75rem;
   }
+
   .cta-card .btn {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
+
+  .promo-requiem-static {
+    min-height: auto;
+  }
 }
 
-@media (max-width: 991px) {
+/* Tablets y pantallas medianas (entre 768px y 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
   .hero-image-wrap {
     max-width: 520px;
   }
+}
+
+/* Pantallas medianas (menos de 992px) */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding-bottom: 1rem;
+  }
+
+  .navbar-nav .btn-warning {
+    margin-left: 0 !important;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Pantallas grandes (992px en adelante) */
+@media (min-width: 992px) {
+  .hero .col-lg-6 {
+    text-align: end;
+  }
+
+  .hero-image-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-img {
+    transform: translateX(20%) translateY(20%);
+  }
+}
+@media (max-width: 767px) {
+  .hero-image-wrap {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    width: 100%;
+  }
+  .hero-img {
+    width: 100%;
+    height: auto;
+    transform: none !important;
+  }
+
+  .col-lg-6.text-lg-end {
+    text-align: center !important;
+  }
+  .hero .row {
+    overflow-x: hidden;
+  }
+  .hero-content {
+    overflow-x: hidden;
+  }
+}
+.promo-requiem-static {
+  position: relative;
+  overflow: hidden;
+}
+
+.fade-overlay-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px; /* Ajusta según prefieras */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.fade-overlay-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  pointer-events: none;
+  z-index: 1;
 }

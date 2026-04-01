@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/icons/xbox-icon.png" type="image/png" />
     <title>Xbox Store | Mandos Oficiales</title>
 
     <!-- Iconos-->
@@ -40,6 +41,7 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
       <div class="container">
+        <i class="fab fa-xbox fs-3 opacity-75 me-2"></i>
         <a class="navbar-brand fw-bold fs-4" href="#">Xbox Store</a>
 
         <button
@@ -63,7 +65,7 @@
               <a class="nav-link" href="#productos">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contacto">Contacto</a>
+              <a class="nav-link" href="#suscripcion">Xbox Game Pass</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#newsletter">Newsletter</a>
@@ -112,35 +114,13 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
-            <div class="hero-image-wrap position-relative mx-auto">
+          <div class="col-lg-6 text-lg-end text-center">
+            <div class="hero-image-wrap" style="max-width: 90%">
               <img
                 src="img/promo.png"
                 class="hero-img w-100 position-relative z-2"
                 alt="Control Xbox"
               />
-              <div
-                class="floating-card card position-absolute bg-dark bg-opacity-75 border-light text-white"
-                style="left: 4%; bottom: 16%; width: 140px"
-              >
-                <div class="card-body p-2">
-                  <span class="text-white-50 small text-uppercase"
-                    >Duración</span
-                  >
-                  <strong class="d-block">Hasta 40h</strong>
-                </div>
-              </div>
-              <div
-                class="floating-card card position-absolute bg-dark bg-opacity-75 border-light text-white"
-                style="right: 4%; top: 16%; width: 140px"
-              >
-                <div class="card-body p-2">
-                  <span class="text-white-50 small text-uppercase"
-                    >Respuesta</span
-                  >
-                  <strong class="d-block">Ultra rápida</strong>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -292,7 +272,9 @@
                   class="badge bg-success text-dark mb-3 align-self-start fw-bold"
                   >Wireless</span
                 >
-                <h5 class="card-title fw-bold text-white">Xbox Wireless</h5>
+                <h5 class="card-title fw-bold text-white">
+                  Xbox Wireless White
+                </h5>
                 <p class="card-text text-white-50">
                   Conectividad estable y libertad total de movimiento para
                   consola y PC.
@@ -306,8 +288,110 @@
       </div>
     </section>
 
-    <!-- CTA FINAL -->
-    <section id="contacto" class="py-5">
+    <!-- SECCIÓN PROMOCIONAL: RESIDENT EVIL REQUIEM -->
+    <section class="promo-requiem-static position-relative overflow-hidden">
+      <div class="fade-overlay-top"></div>
+      <img
+        src="img/zeno-requiem.jpg"
+        alt="Resident Evil Requiem"
+        class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover object-position-center-30"
+        style="filter: brightness(0.6)"
+      />
+      <div class="fade-overlay-bottom"></div>
+      <div class="container position-relative z-1 py-5">
+        <div class="row justify-content-start">
+          <div class="col-lg-7">
+            <div
+              class="card rounded-4 shadow-lg p-4 p-md-5 text-start"
+              style="background: rgba(0, 0, 0, 0.6)"
+            >
+              <div
+                class="d-flex flex-wrap justify-content-between align-items-center mb-3"
+              >
+                <span class="badge bg-warning text-dark px-3 py-2 fw-bold">
+                  🎁 OFERTA EXCLUSIVA
+                </span>
+                <span class="badge bg-danger text-white px-3 py-2 fw-bold">
+                  EDICIÓN DELUXE
+                </span>
+              </div>
+
+              <h2
+                class="display-5 fw-bold text-white"
+                style="letter-spacing: -0.02em"
+              >
+                Resident Evil
+                <span class="text-danger" style="font-weight: 800"
+                  >Requiem</span
+                >
+              </h2>
+              <p class="lead text-white mb-3">
+                <strong class="text-warning fs-2">GRATIS</strong> al comprar
+                cualquier consola Xbox Series X|S
+              </p>
+
+              <div class="row mt-4 mb-4">
+                <div class="col-md-6">
+                  <ul class="list-unstyled text-white-50">
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                      Código digital descargable
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                      Contenido exclusivo: skins y soundtrack
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                      Acceso anticipado a DLC
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="list-unstyled text-white-50">
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                      Edición Steelbook (física)
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                      Arte conceptual descargable
+                    </li>
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                      30 días de Game Pass Ultimate
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="bg-black bg-opacity-50 rounded-3 p-3 mb-4 text-center"
+              >
+                <span class="text-white-50 small"
+                  >Válido hasta agotar stock ·</span
+                >
+                <span class="text-warning fw-bold">Solo en Xbox Store</span>
+              </div>
+
+              <a
+                href="#"
+                class="btn btn-warning btn-lg fw-bold px-5 py-3 w-100 w-sm-auto"
+              >
+                <i class="bi bi-xbox me-2"></i>COMPRAR CONSOLA
+              </a>
+              <p class="small text-white-50 mt-4 mb-0">
+                *Oferta válida en compras realizadas hasta el 30/04/2026. Código
+                enviado por email tras la confirmación de compra.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN GAME PASS -->
+    <section id="suscripcion" class="py-5">
       <div class="container">
         <div
           class="card bg-dark text-white border-0 overflow-hidden cta-card"
@@ -320,17 +404,24 @@
           <div
             class="card-img-overlay d-flex flex-column justify-content-center text-center bg-black bg-opacity-50 p-3 p-md-5"
           >
-            <p class="text-warning fw-bold text-uppercase small">Último paso</p>
-            <h2 class="fw-bold">¿Listo para subir de nivel?</h2>
+            <p class="text-warning fw-bold text-uppercase small">
+              Juega sin límites
+            </p>
+            <h2 class="fw-bold">Xbox Game Pass Ultimate</h2>
             <p class="lead">
-              Lleva tu experiencia de juego al siguiente nivel con un mando que
-              realmente se siente premium.
+              Disfruta de cientos de juegos de alta calidad en consola y PC,
+              además de <strong class="text-warning">EA Play</strong> y
+              <strong class="text-warning">online multijugador</strong>
+              incluidos.
             </p>
             <a
-              href="#productos"
+              href="#"
               class="btn btn-warning btn-lg mt-2 align-self-center fw-bold"
-              >Comprar ahora</a
+              >Suscríbete ahora</a
             >
+            <p class="small mt-3 mb-0 text-white-50">
+              Primer mes con descuento exclusivo para nuevos miembros.
+            </p>
           </div>
         </div>
       </div>
@@ -518,7 +609,7 @@
               </li>
               <li class="mb-2">
                 <a
-                  href="#contacto"
+                  href="#suscripcion"
                   class="text-white-50 text-decoration-none footer-link"
                   >Ofertas</a
                 >
