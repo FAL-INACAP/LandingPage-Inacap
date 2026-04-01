@@ -6,6 +6,12 @@ Landing page ficticia desarrollada como proyecto académico. Simula una tienda e
 
 ---
 
+## 🌐 Sitio en Producción
+
+🔗 https://xbox-store-inacap.vercel.app/
+
+---
+
 ## ✨ Características Principales
 
 - **Navbar fijo** con menú responsive y botón de compra.
