@@ -2,7 +2,7 @@
 
 Landing page ficticia desarrollada como proyecto académico. Simula una tienda en línea de mandos oficiales de Xbox y promociona la consola Xbox Series X|S mediante ofertas especiales (como la edición _Resident Evil Requiem_) y el servicio Game Pass.
 
-**Nota:** Todos los productos, precios y ofertas son inventados. Este sitio no representa una tienda real ni tiene fines comerciales.
+> **Nota:** Todos los productos, precios y ofertas son inventados. Este sitio no representa una tienda real ni tiene fines comerciales.
 
 ---
 
